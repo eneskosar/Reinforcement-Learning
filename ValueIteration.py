@@ -16,8 +16,8 @@ transitionKernel = {
     "['B',0,'B']": 0.05
 }
 
-mu = 0.9
-beta = 0.2
+mu = 0.5
+beta = 0.25
 
 def cost(x,u):
     if int(x == "G") & u == 1:
