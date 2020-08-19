@@ -16,8 +16,8 @@ transitionKernel = {
     "['B',0,'B']": 0.05
 }
 
-mu = 0.5
-beta = 0.25
+mu = 0.95
+beta = 0.5
 
 def cost(x,u):
     if int(x == "G") & u == 1:
@@ -49,7 +49,7 @@ while True:
         delta = max(delta, abs(StateValues[s] - oldStateValues[s]))
 
     # check for convergence, if values converged then return V
-    if delta < 0.01:
+    if delta < 0.001:
         break
 print("**************************")
 print(StateValues)
