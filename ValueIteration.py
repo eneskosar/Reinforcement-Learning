@@ -1,5 +1,10 @@
 
 
+mu = 0.5
+beta = 0.8
+
+states = ["B", "G"]
+actions = [0, 1]
 
 transitionKernel = {
 ## current state, action , next state, probability
@@ -16,18 +21,11 @@ transitionKernel = {
     "['B',0,'B']": 0.05
 }
 
-mu = 0.5
-beta = 0.8
-
 def cost(x,u):
     if int(x == "G") & u == 1:
         return mu*u-1
     else:
         return mu*u
-
-
-states = ["B", "G"]
-actions = [0, 1]
 
 StateValues = {s: 0 for s in states}
 
